@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Product() {
-  const [hovered, setHovered] = useState(null);
+  const [hovered, setHovered] = useState<number | null>(null);
 
   const features = [
     { icon: "⚡", title: "Blazing Fast", desc: "Edge-rendered at 100+ locations globally" },

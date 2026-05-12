@@ -21,9 +21,9 @@ export default function Shell() {
   const [active, setActive] = useState("saas");
   const [animating, setAnimating] = useState(false);
 
-  const ActiveTemplate = templateComponents[active];
+  const ActiveTemplate = templateComponents[active as keyof typeof templateComponents];
 
-  const switchTo = (id) => {
+  const switchTo = (id: keyof typeof templateComponents) => {
     if (id === active) return;
     setAnimating(true);
     setTimeout(() => {
@@ -85,7 +85,7 @@ export default function Shell() {
           {templates.map(t => (
             <button
               key={t.id}
-              onClick={() => switchTo(t.id)}
+              onClick={() => switchTo(t.id as keyof typeof templateComponents)}
               style={{
                 background: active === t.id ? "rgba(124,110,247,0.2)" : "transparent",
                 border: active === t.id ? "1px solid rgba(124,110,247,0.5)" : "1px solid transparent",
