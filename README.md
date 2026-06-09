@@ -1,73 +1,48 @@
-# React + TypeScript + Vite
+# UI Showcase — Frontend Templates
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A collection of 6 polished UI templates built with React, TypeScript, and Tailwind — no UI libraries.
 
-Currently, two official plugins are available:
+## Templates
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| # | Template | Preview |
+|---|----------|---------|
+| 1 | SaaS Dashboard | [Screenshot 1](public/Screenshots/Screenshot%201.png) |
+| 2 | Products / Landing | [Screenshot 2](public/Screenshots/Screenshot%202.png) |
+| 3 | E-Commerce Card | [Screenshot 3](public/Screenshots/Screenshot%203.png) |
+| 4 | Auth / Login | [Screenshot 4](public/Screenshots/Screenshot%204.png) |
+| 5 | Profile | [Screenshot 5](public/Screenshots/Screenshot%205.png) |
+| 6 | Pricing | [Screenshot 6](public/Screenshots/Screenshot%206.png) |
 
-## React Compiler
+## Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### SaaS Dashboard
+![SaaS Dashboard](public/Screenshots/Screenshot%201.png)
 
-## Expanding the ESLint configuration
+### Products / Landing
+![Products Landing](public/Screenshots/Screenshot%202.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### E-Commerce Card
+![E-Commerce Card](public/Screenshots/Screenshot%203.png)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Auth / Login
+![Auth Login](public/Screenshots/Screenshot%204.png)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Profile
+![Profile](public/Screenshots/Screenshot%205.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Pricing
+![Pricing](public/Screenshots/Screenshot%206.png)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- 0 UI component libraries
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting Started
+
+```bash
+npm install
+npm run dev
 ```
